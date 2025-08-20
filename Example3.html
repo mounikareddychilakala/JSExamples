@@ -1,0 +1,30 @@
+<head>
+  <head>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+
+
+    <h2>Simple Calculator</h2>
+    <input type="text" id="klu">
+    <button onclick="calculate()">=</button>
+    <button onclick="clearDispaly()">Clear</button>
+
+    <p id="result" style="color: blue; font-size: 24px; font-weight:bold ;"></p>
+    <script>
+    function calculate(){
+      try{
+        const expr = document.getElementById('klu').value;
+        const res = eval(expr);
+        document.getElementById('result').innerText = res;
+      }catch{
+        document.getElementById('result').innerText ='Error';
+      }
+    }
+    function clearDispaly(){
+      document.getElementById('klu').value="";
+      document.getElementById('result').innerText = "";
+    }
+    </script>
+  </body>
+</head>
